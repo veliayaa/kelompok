@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fcfcfc;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #ff06c9, #ff05da);
+  padding: 15px 40px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  height: 60px;
+}
+
+.navbar .logo {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff06c9;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar nav a:hover {
+  color: #e0f2f1;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* MAIN */
+main {
+  flex-grow: 1;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+main h2, main h3 {
+  color: #ff0303;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+main h2::after, main h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 5px;
+  background: #b2dfdb;
+  border-radius: 4px;
+}
+
+main section {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+ul {
+  margin-left: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* PRODUK GRID */
+.produk-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.produk-item {
+  width: 300px;
+  text-align: center;
+}
+
+.produk-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.produk-item h3 {
+  margin-top: 12px;
+  font-size: 20px;
+  color: #00695c;
+}
+
+.produk-item p {
+  font-size: 15px;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* GALERI */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.gallery img {
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+form {
+  background: #ffffff;
+  max-width: 100%;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: 700;
+  color: #ff0000;
+}
+
+form input,
+form textarea {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 2px solid #b2dfdb;
+  border-radius: 12px;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #00796b;
+  box-shadow: 0 0 10px rgba(0, 150, 136, 0.4);
+}
+
+form button {
+  background-color: #fb09ff;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 121, 107, 0.5);
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #004d40;
+  transform: translateY(-3px);
+}
+
+footer {
+  height: 60px;
+  padding: 20px;
+  background: linear-gradient(90deg, #ff09eb, #96008e);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  margin-top: 0;
+}
